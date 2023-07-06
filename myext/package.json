@@ -15,7 +15,13 @@
     "commands": [
       {
         "command": "myext.helloWorld",
+        "icon": "resources/pen.svg",
         "title": "Hello World"
+      },
+      {
+        "command": "myext.goodbyeWorld",
+        "icon": "resources/refresh.svg",
+        "title": "Goodbye World"
       }
     ]
   },
