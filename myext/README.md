@@ -16,3 +16,10 @@ code, simply look in the PROBLEMS view to ensure everything is good. To run or d
 extension, use F5 or CTRL-F5, respectively. This will launch another instance of VS Code that has
 the extsension loaded. Hit CTRL-SHIFT-P
 to bring up the command palette, then select _Hello World_
+
+## What this demonstrates
+
+This adds a menu item to "editor/lineNumber/context". The menu doesn't show up
+when you right click where the red breakpoint circle appear. It shows up there
+in VS Code. Instead it shows up in its own menu that appear when you click right
+of that area.
