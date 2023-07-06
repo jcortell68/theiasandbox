@@ -16,3 +16,9 @@ code, simply look in the PROBLEMS view to ensure everything is good. To run or d
 extension, use F5 or CTRL-F5, respectively. This will launch another instance of VS Code that has
 the extsension loaded. Hit CTRL-SHIFT-P
 to bring up the command palette, then select _Hello World_
+
+# What This Demonstrates
+
+The VS Code extensions contributes two menu items to "editor/title/run". In VS Code, they
+appear as a submenu item called "Run or Debug...". In Theia, they appear sams as if they
+had been contributed to "editor/title"

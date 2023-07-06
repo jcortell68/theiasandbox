@@ -20,6 +20,7 @@
       },
       {
         "command": "myext.goodbyeWorld",
+        "icon": "resources/another.svg",
         "title": "Goodbye World"
       }
     ],
@@ -31,48 +32,6 @@
         },
         {
           "command": "myext.goodbyeWorld",
-          "group": "navigation"
-        }
-      ],
-      "editor/title": [
-        {
-          "command": "myext.helloWorld",
-          "group": "navigation"
-        }
-      ],
-      "editor/title/context": [
-        {
-          "command": "myext.helloWorld",
-          "group": "navigation"
-        }
-      ],
-      "editor/context": [
-        {
-          "command": "myext.helloWorld",
-          "group": "navigation"
-        }
-      ],
-      "editor/lineNumber/context": [
-        {
-          "command": "myext.helloWorld",
-          "group": "navigation"
-        }
-      ],
-      "view/item/context": [
-        {
-          "command": "myext.helloWorld",
-          "group": "navigation"
-        }
-      ],
-      "view/title": [
-        {
-          "command": "myext.helloWorld",
-          "group": "navigation"
-        }
-      ],
-      "explorer/context": [
-        {
-          "command": "myext.helloWorld",
           "group": "navigation"
         }
       ]
