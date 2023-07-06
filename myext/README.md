@@ -16,3 +16,9 @@ code, simply look in the PROBLEMS view to ensure everything is good. To run or d
 extension, use F5 or CTRL-F5, respectively. This will launch another instance of VS Code that has
 the extsension loaded. Hit CTRL-SHIFT-P
 to bring up the command palette, then select _Hello World_
+
+# What This Demonstrates
+
+The VS Code extensions contributes two menu items to "editor/title". One of the menu items
+is associated with a command that lacks an icon. Theia should be using the command's
+title (as per VS Code behavior) but instead shows the menu item in the editor title toolbar without any visual cue.
