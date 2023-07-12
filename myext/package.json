@@ -30,6 +30,20 @@
           "command": "myext.helloWorld",
           "group": "navigation"
         }
+      ],
+      "view/item/context": [
+        {
+          "command": "myext.helloWorld",
+          "group": "navigation"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "myext.view",
+          "name": "Hello World View"
+        }
       ]
     }
   },
