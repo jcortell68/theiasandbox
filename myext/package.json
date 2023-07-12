@@ -15,9 +15,6 @@
     "commands": [
       {
         "command": "myext.helloWorld",
-<<<<<<< HEAD
-        "title": "Hello World"
-=======
         "icon": "resources/pen.svg",
         "title": "Hello World"
       },
@@ -25,9 +22,31 @@
         "command": "myext.goodbyeWorld",
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
->>>>>>> 3bab635 (icon adjustments)
       }
-    ]
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "myext.view",
+          "name": "Hello World View"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "myext.helloWorld",
+          "group": "navigation"
+        }
+      ],
+
+      "view/item/context": [
+        {
+          "command": "myext.helloWorld",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "clean": "rimraf out",
