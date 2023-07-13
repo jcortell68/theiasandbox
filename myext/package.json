@@ -47,6 +47,18 @@
       ]
     },
     "menus": {
+      "view/title": [
+        {
+          "submenu": "myext.stooges",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "submenu": "myext.stooges",
+          "group": "navigation"
+        }
+      ],
       "editor/title": [
         {
           "submenu": "myext.stooges",
