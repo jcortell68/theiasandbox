@@ -38,6 +38,9 @@
           "description": "This setting I'm not so sure about."
         }
       }
+    },
+    "configurationDefaults": {
+      "files.autoSave": "onWindowChange"
     }
   },
   "scripts": {
