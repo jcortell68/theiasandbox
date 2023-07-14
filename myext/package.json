@@ -23,6 +23,13 @@
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
       }
+    ],
+    "themes": [
+      {
+        "label": "My Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/my-theme.json"
+      }
     ]
   },
   "scripts": {
