@@ -34,7 +34,7 @@
         },
         "another.setting": {
           "type": "number",
-          "default": "false",
+          "default": 999,
           "description": "This setting I'm not so sure about."
         }
       }
