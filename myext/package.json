@@ -23,6 +23,12 @@
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "myext.helloWorld",
+        "key": "ctrl+f1"
+      }
     ]
   },
   "scripts": {
