@@ -27,11 +27,17 @@
     "views": {
       "explorer": [
         {
-          "id": "myext.view",
+          "id": "myextview",
           "name": "Hello World View"
         }
       ]
     },
+    "viewsWelcome": [
+      {
+        "view": "myextview",
+        "contents": "This is my custom view. It has a TreeView but currently the tree has no content.\n[Say Hello](command:myext.helloWorld)\nThis content brought to you by a viewsWelcome, [see more here](https://code.visualstudio.com/api/references/contribution-points#contributes.viewsWelcome)."
+      }
+    ],
     "menus": {
       "view/title": [
         {
@@ -39,7 +45,6 @@
           "group": "navigation"
         }
       ],
-
       "view/item/context": [
         {
           "command": "myext.helloWorld",
