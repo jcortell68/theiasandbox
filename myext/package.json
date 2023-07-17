@@ -24,8 +24,17 @@
         "title": "Goodbye World"
       }
     ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "myextviewscontainer",
+          "title": "My Views Container",
+          "icon": "resources/refresh.svg"
+        }
+      ]
+    },
     "views": {
-      "explorer": [
+      "myextviewscontainer": [
         {
           "id": "myext.view",
           "name": "Hello World View"
