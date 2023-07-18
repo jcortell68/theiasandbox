@@ -23,6 +23,14 @@
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
       }
+    ],
+    "iconThemes": [
+      {
+        "id": "myicontheme",
+        "label": "My File Icon Theme",
+        "path": "./src/file-icon-theme.json",
+        "_watch": true
+      }
     ]
   },
   "scripts": {
