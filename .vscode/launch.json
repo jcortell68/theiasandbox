@@ -45,10 +45,11 @@
             "sourceMaps": true,
             "internalConsoleOptions": "openOnSessionStart",
             "outFiles": [
-                "${workspaceRoot}/electron-app/src-gen/frontend/electron-main.js",
+                "${workspaceRoot}/electron-app/src-gen/backend/electron-main.js",
                 "${workspaceRoot}/electron-app/src-gen/backend/main.js",
                 "${workspaceRoot}/*/lib/**/*.js",
                 "${workspaceRoot}/node_modules/@theia/*/lib/**/*.js",
+                "${workspaceRoot}/plugins/myext/dist/*.js",
             ],
         },
         {
@@ -59,8 +60,7 @@
             "windows": {
                 "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
             },
-            "program": "${workspaceRoot}/electron-app/src-gen/frontend/electron-main.js",
-            "protocol": "inspector",
+            "program": "${workspaceRoot}/electron-app/src-gen/backend/electron-main.js",
             "args": [
                 "--loglevel=debug",
                 "--hostname=localhost",
@@ -74,39 +74,9 @@
             },
             "sourceMaps": true,
             "outFiles": [
-                "${workspaceRoot}/electron-app/src-gen/frontend/electron-main.js",
+                "${workspaceRoot}/electron-app/src-gen/backend/electron-main.js",
                 "${workspaceRoot}/electron-app/src-gen/backend/main.js",
-                "${workspaceRoot}/*/lib/**/*.js",
-                "${workspaceRoot}/node_modules/@theia/*/lib/**/*.js",
-            ],
-            "smartStep": true,
-            "internalConsoleOptions": "openOnSessionStart",
-            "outputCapture": "std",
-            "cwd": "${workspaceRoot}/electron-app"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Start Electron Backend (bare)",
-            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
-            "windows": {
-                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
-            },
-            "program": "${workspaceRoot}/electron-app/src-gen/frontend/electron-main.js",
-            "protocol": "inspector",
-            "args": [
-                "--loglevel=debug",
-                "--hostname=localhost",
-                "--no-cluster",
-                "--plugins=local-dir:${workspaceRoot}/plugins"
-            ],
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "sourceMaps": true,
-            "outFiles": [
-                "${workspaceRoot}/electron-app/src-gen/frontend/electron-main.js",
-                "${workspaceRoot}/electron-app/src-gen/backend/main.js",
+                "${workspaceRoot}/plugins/myext/dist/*.js",
                 "${workspaceRoot}/*/lib/**/*.js",
                 "${workspaceRoot}/node_modules/@theia/*/lib/**/*.js",
             ],
@@ -115,7 +85,5 @@
             "outputCapture": "std",
             "cwd": "${workspaceRoot}/electron-app"
         }
-
-
-    ]
+  ]
 }
