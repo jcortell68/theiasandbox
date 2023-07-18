@@ -23,6 +23,11 @@
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
       }
+    ],
+    "taskDefinitions": [
+      {
+        "type": "mytasktype"
+      }
     ]
   },
   "scripts": {
