@@ -70,7 +70,8 @@
                 "--hosted-plugin-inspect=9339",
             ],
             "env": {
-                "NODE_ENV": "development"
+                "NODE_ENV": "development",
+                "NODE_OPTIONS": "--enable-source-maps"
             },
             "sourceMaps": true,
             "outFiles": [
@@ -79,11 +80,13 @@
                 "${workspaceRoot}/plugins/myext/dist/*.js",
                 "${workspaceRoot}/*/lib/**/*.js",
                 "${workspaceRoot}/node_modules/@theia/*/lib/**/*.js",
+                "${workspaceRoot}/myext/dist/**/*.js",
+                "${workspaceRoot}/plugins/myext/dist/**/*.js",
             ],
             "smartStep": true,
             "internalConsoleOptions": "openOnSessionStart",
             "outputCapture": "std",
             "cwd": "${workspaceRoot}/electron-app"
         }
-  ]
+    ]
 }
