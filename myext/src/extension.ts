@@ -20,6 +20,26 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 
 	context.subscriptions.push(disposable);
+
+	class MyTerminalOptions implements vscode.TerminalOptions {
+		name = "My kind of terminal";
+
+		// We can avoid the exception by specifying "cmd.exe", but we shouldn't need to.
+		// In VS Code, specifying just "cmd" works fine.
+		//
+		// Note that working around this bug by specifying the extension unfortunately
+		// leads you into the more general bug that opening a terminal in Theia
+		// hangs the app: https://github.com/eclipse-theia/theia/issues/12733
+		shellPath = "cmd";
+	}
+
+	class MyTerminalProfileProvider implements vscode.TerminalProfileProvider {
+		provideTerminalProfile(token: vscode.CancellationToken): vscode.ProviderResult<vscode.TerminalProfile> {
+			return new vscode.TerminalProfile(new MyTerminalOptions);
+		}
+	};
+
+	vscode.window.registerTerminalProfileProvider('myext.terminal-profile', new MyTerminalProfileProvider());
 }
 
 // This method is called when your extension is deactivated
