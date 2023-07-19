@@ -23,7 +23,18 @@
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
       }
-    ]
+    ],
+		"colors": [
+			{
+				"id": "myext.mybluecolor",
+				"description": "Color contributed by my VS Code extensions",
+				"defaults": {
+					"dark": "#00FFFF",
+					"light": "#00FFFF",
+					"highContrast": "#00FFFF"
+				}
+			}
+		]
   },
   "scripts": {
     "clean": "rimraf out",
