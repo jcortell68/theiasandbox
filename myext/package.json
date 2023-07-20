@@ -38,9 +38,10 @@
     }
   },
   "scripts": {
-    "clean": "rimraf out",
-    "prepare": "yarn clean && yarn compile && yarn symlink",
+    "clean": "rimraf out && rimraf dist",
+    "prepare": "yarn clean && yarn compile-theia && yarn symlink",
     "vscode:prepublish": "yarn run package",
+    "compile-theia": "tsc -p . --outDir dist",
     "compile": "webpack",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
