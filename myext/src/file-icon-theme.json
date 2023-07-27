@@ -4,5 +4,6 @@
       "iconPath": "../resources/folder.svg"
     }
   },
-  "folder": "myfolder"
+  "folder": "myfolder",
+  "folderExpanded": "myfolder"
 }
