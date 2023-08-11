@@ -95,11 +95,30 @@ function getWebviewContent(msg: string, changeStateCount: number, img: vscode.Ur
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Some Title</title>
+		<style>
+		body.vscode-light {
+			color: red;
+		}
+		body.vscode-dark {
+			color: yellow;
+		}
+		body.vscode-high-contrast {
+			color: blue;
+		}
+		</style>
 	</head>
 	<body>
 		<h1>${msg}</h1>
 		<h2>There have been ${changeStateCount} state changes</h2>
 		<img src="${img}"/>
+		<p>The webview HTML content includes internal CSS that will set the text color as follows:
+		<ul>
+		<li>light-theme: red</li>
+		<li>dark-theme: yellow</li>
+		<li>high-contrast: blue</li>
+		</ul>
+		Hit CTRL-K + CTRL-T to change the theme
+		</p>
 	</body>
 	</html>`;
 }
