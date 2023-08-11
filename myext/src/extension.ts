@@ -2,6 +2,9 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
+import { readFileSync, createWriteStream } from 'fs';
+import { get } from 'http';
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -34,15 +37,20 @@ export function activate(context: vscode.ExtensionContext) {
 			);
 		}
 
+		// We want our webview to show an image that's distributed in the extension. We need
+		// to create a special webview URI for that
+		const imgLocalUri = vscode.Uri.joinPath(context.extensionUri, 'resources', 'bnb.png');
+		const imgWebviewUri = panel.webview.asWebviewUri(imgLocalUri);
+
 		// Show some initial conent
-		panel.webview.html = getWebviewContent("Hi!", changeStateCount);
+		panel.webview.html = getWebviewContent("Hi!", changeStateCount, imgWebviewUri);
 
 		// Schedule updates to the content every second
 		let iteration = 0;
       	const updateWebview = () => {
 			if (panel) {
 				const msg = (iteration++ % 2 === 0) ? 'It\'s Friday' : 'Or is it?';
-				panel.webview.html = getWebviewContent(msg, changeStateCount);
+				panel.webview.html = getWebviewContent(msg, changeStateCount, imgWebviewUri);
 			}
 		};
 		const interval = setInterval(updateWebview, 1000);
@@ -74,7 +82,7 @@ export function activate(context: vscode.ExtensionContext) {
 // This method is called when your extension is deactivated
 export function deactivate() {}
 
-function getWebviewContent(msg: string, changeStateCount: number) {
+function getWebviewContent(msg: string, changeStateCount: number, img: vscode.Uri) {
 	return `
 	<!DOCTYPE html>
 	<html lang="en">
@@ -86,6 +94,7 @@ function getWebviewContent(msg: string, changeStateCount: number) {
 	<body>
 		<h1>${msg}</h1>
 		<h2>There have been ${changeStateCount} state changes</h2>
+		<img src="${img}"/>
 	</body>
 	</html>`;
 }
