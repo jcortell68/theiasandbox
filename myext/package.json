@@ -9,7 +9,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onWebviewPanel:myextWebviewPanelType"],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -31,14 +31,7 @@
         "command": "myext.doublecount",
         "title": "Double Count"
       }
-    ],
-    "menus": {
-      "webview/context": [
-        {
-          "command": "myext.helloWorld"
-        }
-      ]
-    }
+    ]
   },
   "scripts": {
     "clean": "rimraf out && rimraf dist",
