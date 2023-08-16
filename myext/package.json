@@ -33,7 +33,7 @@
             "filenamePattern": "*.mce"
           }
         ],
-        "priority": "option"
+        "priority": "default"
       }
     ]
   },
