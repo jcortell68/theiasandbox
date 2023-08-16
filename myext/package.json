@@ -23,6 +23,18 @@
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
       }
+    ],
+    "customEditors": [
+      {
+        "viewType": "myext.myeditor",
+        "displayName": "My Custom Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.mce"
+          }
+        ],
+        "priority": "option"
+      }
     ]
   },
   "scripts": {
