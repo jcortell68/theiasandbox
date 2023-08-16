@@ -38,6 +38,10 @@ export function activate(context: vscode.ExtensionContext) {
 						vscode.workspace.applyEdit(edit);
 				}
 			});
+
+			vscode.workspace.onDidChangeTextDocument((event: vscode.TextDocumentChangeEvent) => {
+				webviewPanel.webview.html = getWebviewContent(event.document.getText());
+			});
 		}
 	};
 
