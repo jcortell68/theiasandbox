@@ -6,6 +6,7 @@ import { CommandContribution, MenuContribution } from '@theia/core/lib/common';
 import { ContainerModule } from '@theia/core/shared/inversify';
 import { SingServer, singServicePath } from '../common/sing-protocol';
 import { WebSocketConnectionProvider } from '@theia/core/lib/browser';
+import { SingClientImpl } from './sing-client-impl';
 
 export default new ContainerModule(bind => {
     bind(CommandContribution).to(HelloWorldCommandContribution);
@@ -13,6 +14,6 @@ export default new ContainerModule(bind => {
 
     bind(SingServer).toDynamicValue(ctx => {
         const connection = ctx.container.get(WebSocketConnectionProvider);
-        return connection.createProxy<SingServer>(singServicePath);
+        return connection.createProxy<SingServer>(singServicePath, new SingClientImpl());
     }).inSingletonScope();
 });
