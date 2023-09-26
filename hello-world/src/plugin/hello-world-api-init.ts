@@ -20,6 +20,7 @@ let hookedModuleLoader = false;
 // when it's requested. The key part of that is hooking into the node module
 // loader. This is called every time a plugin-host process is forked.
 export const provideApi: ExtPluginApiBackendInitializationFn = (rpc: RPCProtocol, _pluginManager: PluginManager) => {
+    console.log('ExtPluginApiBackendInitializationFn provideApi')
     apiFactory = createAPIFactory(rpc);
     pluginManager = _pluginManager;
 
