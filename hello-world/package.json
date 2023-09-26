@@ -8,6 +8,7 @@
     "lib",
     "src"
   ],
+  "types": "src/hello-world.d.ts",
   "dependencies": {
     "@theia/core": "latest"
   },
@@ -23,6 +24,7 @@
   },
   "theiaExtensions": [
     {
+      "backend": "lib/node/hello-world-backend-module",
       "frontend": "lib/browser/hello-world-frontend-module"
     }
   ]

@@ -2,6 +2,10 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
+// The custom API contributed by the hello-world Theia extension. It has a
+// namespace called foo
+import * as helloworld from 'hello-world';
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
@@ -16,7 +20,12 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('myext.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from myext!');
+
+		// We get the message from the foo API namespace
+		const promise = helloworld.foo.getMessage();
+		promise.then(msg => {
+			vscode.window.showInformationMessage(msg);
+		});
 	});
 
 	context.subscriptions.push(disposable);
