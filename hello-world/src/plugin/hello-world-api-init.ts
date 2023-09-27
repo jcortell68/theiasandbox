@@ -84,8 +84,8 @@ export function createAPIFactory(rpc: RPCProtocol): typeof apiFactory {
 
     return function (plugin: Plugin): typeof helloWorldApi {
         const fooNamespace: typeof helloWorldApi.foo = {
-            async getMessage(): Promise<string> {
-                return fooExt.getMessage();
+            async setHelloMessage(msg: string): Promise<void> {
+                return fooExt.setHelloMessage(msg);
             }
         };
 

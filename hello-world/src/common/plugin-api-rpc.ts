@@ -1,7 +1,7 @@
 import { createProxyIdentifier, ProxyIdentifier } from '@theia/plugin-ext/lib/common/rpc-protocol';
 
 export interface FooMain {
-    $getMessage(): PromiseLike<string>;
+    $setHelloMessage(msg: string): PromiseLike<void>;
 }
 export interface FooExt {
     // Placeholder. No callbacks yet

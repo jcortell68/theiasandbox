@@ -1,3 +1,3 @@
 export namespace foo {
-    export function getMessage(): PromiseLike<string>;
+    export function setHelloMessage(msg: string): PromiseLike<void>;
 }

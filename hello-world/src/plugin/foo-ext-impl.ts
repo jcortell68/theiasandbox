@@ -8,7 +8,7 @@ export class FooExtImpl implements FooExt {
         this.proxy = rpc.getProxy(PLUGIN_RPC_CONTEXT.FOO_MAIN);
     }
 
-    getMessage(): PromiseLike<string> {
-        return this.proxy.$getMessage();
+    async setHelloMessage(msg: string): Promise<void> {
+        return this.proxy.$setHelloMessage(msg);
     }
 }

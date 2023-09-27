@@ -5,7 +5,8 @@ import { MainPluginApiProvider } from '@theia/plugin-ext/lib/common/plugin-ext-a
 import { HelloWorldMainPluginApiProvider } from './hello-world-main-plugin-provider';
 
 export default new ContainerModule(bind => {
-    bind(CommandContribution).to(HelloWorldCommandContribution);
+    bind(HelloWorldCommandContribution).toSelf().inSingletonScope();
+    bind(CommandContribution).toService(HelloWorldCommandContribution);
     bind(MenuContribution).to(HelloWorldMenuContribution);
     bind(MainPluginApiProvider).to(HelloWorldMainPluginApiProvider).inSingletonScope();
 });
