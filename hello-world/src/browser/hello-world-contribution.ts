@@ -31,3 +31,4 @@ export class HelloWorldMenuContribution implements MenuContribution {
         });
     }
 }
+export const somestr_e7aa6138_ebfe_4012_9ec9_99a7c40b7812 = 'hello';

@@ -9,7 +9,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onView:myext_myView"],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -23,7 +23,25 @@
         "icon": "resources/refresh.svg",
         "title": "Goodbye World"
       }
-    ]
+    ],
+    "views": {
+      "myext_myViewContainer": [
+        {
+          "type": "webview",
+          "id": "myext_myView",
+          "name": "My Webview"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "myext_myViewContainer",
+          "title": "My Webview Container",
+          "icon": "resources/someicon.svg"
+        }
+      ]
+    }
   },
   "scripts": {
     "clean": "rimraf out && rimraf dist",
