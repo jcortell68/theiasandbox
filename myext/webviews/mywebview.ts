@@ -6,6 +6,6 @@ import { main } from './content';
 
 (function () {
     addEventListener('load', () => {
-        main(vscode);
+        main();
     });
 })();
