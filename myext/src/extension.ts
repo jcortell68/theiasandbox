@@ -44,17 +44,20 @@ class MyWebviewViewProvider implements vscode.WebviewViewProvider {
             localResourceRoots: [this._extensionUri]
         };
 
-        webviewView.webview.html = this.getHtmlForWebview();
+        webviewView.webview.html = this.getHtmlForWebview(webviewView.webview);
     }
 
-    private getHtmlForWebview() {
+    private getHtmlForWebview(webview: vscode.Webview) {
+        const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, 'lib', 'mywebview.js'));
+        const cssUri = webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, 'src', 'styles.css'));
         return `<!DOCTYPE html>
             <html lang="en">
             <head>
-                <title>Title</title>
+                <link rel="stylesheet" href="${cssUri}"/>
             </head>
             <body>
-                <h1>Hello World!</h1>
+                <div id="app"></div>
+                <script src="${scriptUri}"/>
             </body>
             </html>`;
     }
