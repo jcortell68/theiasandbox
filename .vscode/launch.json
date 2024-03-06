@@ -49,6 +49,7 @@
                 "${workspaceRoot}/electron-app/src-gen/backend/main.js",
                 "${workspaceRoot}/*/lib/**/*.js",
                 "${workspaceRoot}/node_modules/@theia/*/lib/**/*.js",
+                "${workspaceRoot}/myext/dist/*.js"
             ],
         },
         {
@@ -66,7 +67,6 @@
                 "--no-cluster",
                 "--plugins=local-dir:${workspaceRoot}/plugins",
                 "--remote-debugging-port=9222",
-                "--hosted-plugin-inspect=9339",
             ],
             "env": {
                 "NODE_ENV": "development",
