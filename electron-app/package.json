@@ -17,6 +17,7 @@
     "@theia/terminal": "latest",
     "@theia/workspace": "latest",
     "@theia/plugin-ext-vscode": "latest",
+    "@theia/plugin-ext-headless": "latest",
     "hello-world": "0.0.0"
   },
   "devDependencies": {

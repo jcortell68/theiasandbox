@@ -9,21 +9,18 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+
   "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "myext.helloWorld",
-        "icon": "resources/pen.svg",
-        "title": "Hello World"
-      },
-      {
-        "command": "myext.goodbyeWorld",
-        "icon": "resources/refresh.svg",
-        "title": "Goodbye World"
-      }
+  "theiaPlugin": {
+    "headless": "./dist/extension-headless.js"
+  },
+  "activationEvents": ["*"],
+  "headless": {
+    "activationEvents": [
+      "*"
     ]
+  },
+  "contributes": {
   },
   "scripts": {
     "clean": "rimraf out && rimraf dist",

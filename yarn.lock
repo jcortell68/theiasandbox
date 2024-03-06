@@ -1721,6 +1721,16 @@
     semver "^7.5.4"
     tslib "^2.6.2"
 
+"@theia/plugin-ext-headless@latest":
+  version "1.47.1"
+  resolved "https://registry.yarnpkg.com/@theia/plugin-ext-headless/-/plugin-ext-headless-1.47.1.tgz#43e25812db39ba3afa4ffe039b327a67596e55cb"
+  integrity sha512-r2IKm5sNtPlaqmB5uqTvCXgNVmaGSYHUTWlbywr1vJFJSZ+T7HkIKKcqAa/r1XYeuR/RklXvflsa7QjNBubqgg==
+  dependencies:
+    "@theia/core" "1.47.1"
+    "@theia/plugin-ext" "1.47.1"
+    "@theia/terminal" "1.47.1"
+    tslib "^2.6.2"
+
 "@theia/plugin-ext-vscode@latest":
   version "1.47.1"
   resolved "https://registry.yarnpkg.com/@theia/plugin-ext-vscode/-/plugin-ext-vscode-1.47.1.tgz#98ecee4f12fd4f67bdb50dad14fd496c86362b9c"
